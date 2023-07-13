@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+; hi - @z_h_ on discord
+
+
+
+[-HKEY_CLASSES_ROOT\*\shell\Force_Delete]
+[-HKEY_CLASSES_ROOT\*\shell\runas]
+
+[HKEY_CLASSES_ROOT\*\shell\Force_Delete]
+@="Force Delete"
+"Extended"=-
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"NeverDefault"=""
+
+[HKEY_CLASSES_ROOT\*\shell\Force_Delete\command]
+@="powershell -windowstyle hidden -command \"Start-Process \\\"C:/path/to/your/Force_Delete.exe\\\" -ArgumentList '\\\"%1\\\"' -Verb runAs\""
+"IsolatedCommand"= "powershell -windowstyle hidden -command \"Start-Process \\\"C:/path/to/your/Force_Delete.exe\\\" -ArgumentList '\\\"%1\\\"' -Verb runAs\""
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\Force_Delete]
+@="Force Delete"
+"Extended"=-
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="middle"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Force_Delete\command]
+@="powershell -windowstyle hidden -command \"Start-Process \\\"C:/path/to/your/Force_Delete.exe\\\" -ArgumentList '\\\"%1\\\"' -Verb runAs\""
+"IsolatedCommand"= "powershell -windowstyle hidden -command \"Start-Process \\\"C:/path/to/your/Force_Delete.exe\\\" -ArgumentList '\\\"%1\\\"' -Verb runAs\""
